@@ -8,7 +8,7 @@ public class Main {
         mercedes.accelerate(-60);
     }
 
-    public static class Boat
+    public static class Boat implements WaterVehicle
     {
         public String vehicleName;
 
@@ -23,7 +23,7 @@ public class Main {
         {
             return this.vehicleName;
         }
-        public int getVehicleCapactiy()
+        public int getVehicleCapacity()
         {
             return this.vehicleCapacity;
         }

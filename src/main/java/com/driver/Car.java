@@ -55,4 +55,8 @@ public class Car extends Vehicle {
     {
         return this.isManual;
     }
+    public int getSeats()
+    {
+        return this.seats;
+    }
 }
