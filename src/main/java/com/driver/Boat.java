@@ -6,6 +6,11 @@ public  class Boat implements WaterVehicle
 
     public int vehicleCapacity;
 
+    public Boat()
+    {
+
+    }
+
     public Boat(String vehicleName,int vehicleCapacity)
     {
         this.vehicleName = vehicleName;
