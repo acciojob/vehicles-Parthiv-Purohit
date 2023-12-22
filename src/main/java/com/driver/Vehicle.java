@@ -45,6 +45,11 @@ public class Vehicle {
         return this.name;
     }
 
+    public void SetCurrentDirection(int direction)
+    {
+        this.currentDirection = this.currentDirection + direction;
+    }
+
 
 
 
