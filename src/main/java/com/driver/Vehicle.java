@@ -2,71 +2,46 @@ package com.driver;
 
 public class Vehicle {
 
-    public String name;
-    public int currentSpeed;
-    public int currentDirection;
-
-    public Vehicle()
-    {
-
-    }
+    private String name;
+    private int currentSpeed;
+    private int currentDirection;
 
     public Vehicle(String name) {
-       this.name = name;
-       this.currentSpeed = 0;
-       this.currentDirection = 0;
+        this.name=name;
+        currentDirection=0;
+        currentSpeed=0;
     }
 
     public void steer(int direction){
         //direction is in degrees, add it to the current direction
-        setCurrentDirection(direction);
+        this.currentDirection=this.currentDirection+direction;
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
-    }
-
-    private void setCurrentDirection(int direction) {
-        this.currentDirection = this.currentDirection + direction;
-    }
-    public void setCurrentSpeed(int direction) {
-        this.currentSpeed =  direction;
     }
 
     public void move(int speed, int direction){
         //set the values of currentSpeed and currentDirection
-        this.currentSpeed = speed;
-        this.currentDirection = direction;
+        this.currentSpeed=speed;
+        this.currentDirection=direction;
+
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 
+
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
     public void stop(){
+        this.currentSpeed=0;
 
         System.out.println("stop method called - The vehicle is stopped");
     }
 
-    public int getCurrentDirection()
-    {
-        return this.currentDirection;
+    public String getName() {
+        return name;
     }
-
-    public int getCurrentSpeed()
-    {
-        return this.currentSpeed;
-    }
-
-    public String getName()
-    {
-        return this.name;
-    }
-
-//    public void SetCurrentDirection(int direction)
-//    {
-//
-//    }
-
-
-
-
-
 }
-
-
-
